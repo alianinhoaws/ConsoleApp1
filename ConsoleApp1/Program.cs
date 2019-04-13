@@ -17,7 +17,9 @@ namespace ConsoleApp1
             string str1 = "some thing";
             string str2 = "some thing";
             string str3 = str1 + str0 + str2;
-            Console.WriteLine(str3); 
+            string str4 = Convert.ToString(x);
+            int zd = Convert.ToInt32(str0); 
+            Console.WriteLine(str4); 
             Console.WriteLine(z);
             Console.ReadKey();
         }
