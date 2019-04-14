@@ -1,27 +1,37 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ConsoleApp1
-{ 
+{
     class MainClass
     {
         public static void Main(string[] args)
         {
-            string[] arr2 = new string[3]
+            List<int> nums = new List<int>();
             {
-                "Bob", "MAX", "DAVID" };
-            
-        
-            for (int i=0;i< arr2.Length;i++)
-            {
-                Console.Write (arr2[i]);
-              Console.Write (" ");
+                nums.Add(73);
+                nums.Add(22);
             }
-            
+           
+            for (int i = 0; i < nums.Count; i++)
+            {
+                Console.Write(nums[i]);
+                Console.Write(" ");
+            }
+            nums.RemoveAt(0);
+            Console.Write("\n");
+
+            for (int i = 0; i < nums.Count; i++)
+            {
+                Console.Write(nums[i]);
+                            }
+
             Console.ReadKey();
-            }
-  
+        }
+
+    }
 }
-}
+
 
 
     
