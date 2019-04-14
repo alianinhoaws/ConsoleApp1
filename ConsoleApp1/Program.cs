@@ -6,18 +6,21 @@ namespace ConsoleApp1
     {
         public static void Main(string[] args)
         {
-            int [] arr = new int [5];
-            arr[0] = 54;
-            arr[4] = 33;
-            for (int i=0;i<arr.Length;i++)
+            string[] arr2 = new string[3]
             {
-                Console.Write (arr [i]);
-                Console.Write(" ");
+                "Bob", "MAX", "DAVID" };
+            
+        
+            for (int i=0;i< arr2.Length;i++)
+            {
+                Console.Write (arr2[i]);
+              Console.Write (" ");
             }
             
             Console.ReadKey();
             }
-        }
+  
+}
 }
 
 
