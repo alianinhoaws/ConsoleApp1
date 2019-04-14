@@ -3,18 +3,42 @@ using System.Collections.Generic;
 
 namespace ConsoleApp1
 {
-    class MainClass
+    class Cars
     {
-        public static void Main(string[] args)
+        public int wheels = 4;
+        private float speed;
+        protected bool isWorking = true;
+    
+
+    public void SetValues(float speed, bool isWorking)
+    {
+        this.speed = speed;
+        this.isWorking = isWorking;
+
+    }
+        public void GetValues()
         {
-            float[] nums = { 1.23f, 5.2f, 33.1f };
-            foreach (float el in nums)
+            Console.WriteLine("Car speed " + this.speed + ", car is working "
+                + this.isWorking + " Wheels " + this.wheels);
+        }
+
+
+        class MainClass
+        {
+            public static void Main (string[] args)
             {
-                Console.WriteLine(" " + el);
+                Cars Audi = new Cars();
+
+                Audi.SetValues(223.3f, true);
+                Audi.GetValues ();
+                Cars Volvo = new Cars();
+             
+                Volvo.wheels = 6;
+                Volvo.SetValues(180.3f, false);
+                Volvo.GetValues();
+               
                 Console.ReadKey();
             }
-
-
         }
     }
 }
