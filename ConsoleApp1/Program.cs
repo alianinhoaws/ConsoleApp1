@@ -27,11 +27,23 @@ namespace ConsoleApp1
         {
 
         }
+        class Truks : Cars
+        {
+            public int wage;
+            public Truks(int wheels, float speed, bool isWorking, int wage) : base (wheels, speed, isWorking)
+            {
+                this.wage = wage;
+            }
+        }
+      
 
         class MainClass
         {
             public static void Main (string[] args)
             {
+                Truks Man = new Truks(8, 100.2f, true, 200);
+                Man.GetValues();
+                Console.WriteLine(Man.wage);
                 Cars Audi = new Cars(4, 223.4f, true);
                 Audi.GetValues();
                 Cars Volvo = new Cars(6,180.4f,false);
