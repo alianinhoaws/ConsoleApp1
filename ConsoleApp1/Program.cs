@@ -13,7 +13,7 @@ namespace ConsoleApp1
         protected bool isWorking = true;
         public Models model;
     
-        public void GetValues()
+        public virtual void GetValues()
         {
             Console.WriteLine("Car speed " + this.speed + ", car is working "
                 + this.isWorking + " Wheels " + this.wheels);
@@ -38,8 +38,14 @@ namespace ConsoleApp1
             {
                 this.wage = wage;
             }
+            public override void GetValues()
+            {
+                base.GetValues();
+                Console.WriteLine("Wage " + this.wage);
+            }
+
         }
-      
+
 
         class MainClass
         {
@@ -47,7 +53,6 @@ namespace ConsoleApp1
             {
                 Truks Man = new Truks(8, 100.2f, true, 200);
                 Man.GetValues();
-                Console.WriteLine(Man.wage);
                 Cars Audi = new Cars(4, 223.4f, true);
                 Audi.model = Models.AUDI;
                 Audi.GetValues();
