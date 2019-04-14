@@ -6,23 +6,28 @@ namespace ConsoleApp1
     {
         public static void Main(string[] args)
         {
-            double a;
-            bool isTrue = true;
-            a=Convert.ToDouble (Console.ReadLine ());
-            if (a > 10f)
-            {
-                Console.Write("A bigger then 10");
+            int a, b;
+            a=Convert.ToInt32(Console.ReadLine());
+            switch (a) 
+                {
+                case 1:
+                    b = 45;
+                    Console.Write(b);
+                    break;
+                case 2:
+                    b = 55;
+                    Console.Write(b);
+                    break;
+                case 3:
+                    b = 65;
+                    Console.Write(b);
+                    break;
+                default:
+                    b = 0;      
+                    Console.Write(b);
+                    break;
+
             }
-            else if (a < 10f && a > 0)
-            {
-                Console.Write("a" + isTrue);
-            }
-            else if (a < 10f && a < 0)
-            {
-                Console.Write("BAD");
-            }
-          
-            Console.WriteLine("Res  " + a);
             Console.ReadKey();
             }
         }
