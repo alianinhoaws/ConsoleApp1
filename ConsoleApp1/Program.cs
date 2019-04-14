@@ -3,11 +3,15 @@ using System.Collections.Generic;
 
 namespace ConsoleApp1
 {
+    enum Models { AUDI, VOLVO, NISSAN, VOLKSWAGEN };
+
+
     class Cars
     {
         public int wheels;
         private float speed;
         protected bool isWorking = true;
+        public Models model;
     
         public void GetValues()
         {
@@ -45,6 +49,7 @@ namespace ConsoleApp1
                 Man.GetValues();
                 Console.WriteLine(Man.wage);
                 Cars Audi = new Cars(4, 223.4f, true);
+                Audi.model = Models.AUDI;
                 Audi.GetValues();
                 Cars Volvo = new Cars(6,180.4f,false);
                 Volvo.GetValues();
