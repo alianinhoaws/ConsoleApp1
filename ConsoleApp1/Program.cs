@@ -7,28 +7,25 @@ namespace ConsoleApp1
     {
         public static void Main(string[] args)
         {
-            List<int> nums = new List<int>();
-            {
-                nums.Add(73);
-                nums.Add(22);
-            }
-           
-            for (int i = 0; i < nums.Count; i++)
-            {
-                Console.Write(nums[i]);
-                Console.Write(" ");
-            }
-            nums.RemoveAt(0);
-            Console.Write("\n");
+            int[,] arr = new int[3, 2]
+            { {2,5} , {21,4}, {3,11}
 
-            for (int i = 0; i < nums.Count; i++)
-            {
-                Console.Write(nums[i]);
-                            }
+            };
 
-            Console.ReadKey();
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    Console.WriteLine(arr [i, j]);
+                    Console.Write(" ");
+                }
+                {
+                    Console.ReadKey();
+                }
+
+            }
         }
-
     }
 }
 
