@@ -7,24 +7,14 @@ namespace ConsoleApp1
     {
         public static void Main(string[] args)
         {
-            int[,] arr = new int[3, 2]
-            { {2,5} , {21,4}, {3,11}
-
-            };
-
-
-            for (int i = 0; i < 3; i++)
+            float[] nums = { 1.23f, 5.2f, 33.1f };
+            foreach (float el in nums)
             {
-                for (int j = 0; j < 2; j++)
-                {
-                    Console.WriteLine(arr [i, j]);
-                    Console.Write(" ");
-                }
-                {
-                    Console.ReadKey();
-                }
-
+                Console.WriteLine(" " + el);
+                Console.ReadKey();
             }
+
+
         }
     }
 }
